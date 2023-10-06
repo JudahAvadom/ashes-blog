@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import Head from 'next/head';
 import { Inter } from 'next/font/google'
+import Navbar from '@/components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,10 @@ export default function RootLayout({
       <Head>
         <link rel="shortcut icon" href="/ash.png" />
       </Head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
